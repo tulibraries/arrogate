@@ -57,3 +57,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rsolr', '~> 1.0'
+gem 'harvest_libguides', git: 'https://github.com/tulibraries/harvest_libguides.git'
+
