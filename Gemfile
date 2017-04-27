@@ -57,5 +57,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rsolr', '~> 1.0'
-gem 'harvest_libguides', git: 'https://github.com/tulibraries/harvest_libguides.git'
+gem 'guiding_light', git: 'https://github.com/tulibraries/guiding_light.git'
 
