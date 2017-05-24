@@ -22,7 +22,11 @@ class CatalogController < ApplicationController
            title_display,
            subject_topic_facet,
            url_fulltext_display,
-           description_display",
+           description_display,
+           summon_links_count_i,
+           diamond_links_count_i,
+           diamond_other_links_count_i,
+           journal_finder_links_count_i,",
       rows: 10
     }
 
@@ -81,6 +85,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'pub_date', label: 'Publication Year', single: true
     config.add_facet_field 'subject_topic_facet', label: 'Topic', limit: 20, index_range: 'A'..'Z'
     config.add_facet_field 'author_facet', label: 'Author', limit: true
+    config.add_facet_field 'link_facet', label: 'External Links'
 
 
     # Have BL send all facet field names to Solr, which has been the default
@@ -96,6 +101,10 @@ class CatalogController < ApplicationController
     config.add_index_field 'author_vern_display', label: 'Author'
     config.add_index_field 'format', label: 'Format'
     config.add_index_field 'description_display', label: 'Description'
+    config.add_index_field 'summon_links_count_i', label: 'Summon Links'
+    config.add_index_field 'diamond_links_count_i', label: 'Diamond Permalinks'
+    config.add_index_field 'diamond_other_links_count_i', label: 'Other Diamond Links'
+    config.add_index_field 'journal_finder_links_count_i', label: 'Journal Finder Links'
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
@@ -176,9 +185,10 @@ class CatalogController < ApplicationController
     # whether the sort is ascending or descending (it must be asc or desc
     # except in the relevancy case).
     config.add_sort_field 'score desc, pub_date_sort desc, title_sort asc', label: 'relevance'
-    config.add_sort_field 'pub_date_sort desc, title_sort asc', label: 'year'
-    config.add_sort_field 'author_sort asc, title_sort asc', label: 'author'
-    config.add_sort_field 'title_sort asc, pub_date_sort desc', label: 'title'
+    config.add_sort_field 'summon_links_count_i desc, pub_date_sort desc', label: 'Summon Links'
+    config.add_sort_field 'diamond_links_count_i desc, pub_date_sort desc', label: 'Diamond Permalinks'
+    config.add_sort_field 'diamond_other_links_count_i desc, pub_date_sort desc', label: 'Other Diamond Links'
+    config.add_sort_field 'journal_finder_links_count_i desc, pub_date_sort desc', label: 'Journal Finder Links'
 
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
