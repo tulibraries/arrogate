@@ -59,4 +59,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rsolr', '~> 1.0'
 gem 'guiding_light', git: 'https://github.com/tulibraries/guiding_light.git'
+gem 'whenever', require: false
 
