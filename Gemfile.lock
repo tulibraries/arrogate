@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tulibraries/guiding_light.git
-  revision: f734bea745e0a0987c6e140ca2962a1db1f760bf
+  revision: df3c33b04c8de27ed2f1f2d46caa2b8a4f466b66
   specs:
     guiding_light (0.4.1)
       activesupport (~> 5.0)
