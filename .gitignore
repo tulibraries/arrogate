@@ -23,4 +23,5 @@
 
 config/secrets.yml
 config/libguides.yml
+config/guiding_light.yml
 cache

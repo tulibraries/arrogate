@@ -21,6 +21,6 @@ module Blgsearch
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-    config.guiding_light = config_for(:libguides).with_indifferent_access
+    config.guiding_light = config_for(:guiding_light).with_indifferent_access
   end
 end

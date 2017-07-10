@@ -1,0 +1,15 @@
+default: &default
+  api_key:  "Not-Your-LibGuides-API-Key"
+  api_url:  "http://lgapi-us.libapps.com/1.1/guides/"
+  site_id:  "123"
+  solr_url: "http://localhost:8983/solr/blacklight-core"
+  solr_batch_size: 100
+
+development:
+    <<: *default
+
+test:
+    <<: *default
+
+production:
+    <<: *default        
