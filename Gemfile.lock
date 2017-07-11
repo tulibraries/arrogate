@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tulibraries/guiding_light.git
-  revision: df3c33b04c8de27ed2f1f2d46caa2b8a4f466b66
+  revision: 5ffd8b52da610d3aa68b7409c1f7cb1072c032ff
   specs:
     guiding_light (0.4.1)
       activesupport (~> 5.0)
@@ -91,7 +91,7 @@ GEM
       thor (~> 0.19.1)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
-    i18n (0.8.4)
+    i18n (0.8.6)
     jbuilder (2.6.3)
       activesupport (>= 3.0.0, < 5.2)
       multi_json (~> 1.2)
