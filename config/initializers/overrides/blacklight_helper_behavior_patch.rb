@@ -1,7 +1,8 @@
+require 'blacklight/url_helper_behavior'
 # frozen_string_literal: true
 ##
 # URL helper methods
-module Blacklight::UrlHelperBehavior
+Blacklight::UrlHelperBehavior.module_eval do
   def url_for_document(doc, options = {})
     doc["url_fulltext_display"].first
   end

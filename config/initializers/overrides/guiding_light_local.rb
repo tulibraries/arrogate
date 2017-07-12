@@ -1,7 +1,6 @@
-require 'rubygems'
-require 'nokogiri'
+require 'guiding_light/harvest'
 
-module GuidingLight::Harvest
+GuidingLight::Harvest.module_eval do
   def self.application_fields(solr_doc, libguide_doc)
     external_link_patterns.each do |type,shortname, pattern|
       link_count = libguide_doc.xpath("//a").map { |a| a["href"] }.select { |link| link =~ pattern }.count
