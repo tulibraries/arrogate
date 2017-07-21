@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tulibraries/guiding_light.git
-  revision: 5ffd8b52da610d3aa68b7409c1f7cb1072c032ff
+  revision: 8286f6d839327e64cbeb3ae04cefa7a9e2aa97c5
   specs:
     guiding_light (0.4.1)
       activesupport (~> 5.0)
@@ -123,7 +123,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
-    minitest (5.10.2)
+    minitest (5.10.3)
     moneta (1.0.0)
     multi_json (1.12.1)
     multipart-post (2.0.0)
