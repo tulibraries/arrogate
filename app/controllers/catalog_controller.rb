@@ -17,6 +17,7 @@ class CatalogController < ApplicationController
     config.default_solr_params = {
       fl: "id, 
            score,
+           status_t,
            author_display,
            language_facet, 
            title_display,
@@ -86,6 +87,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'subject_topic_facet', label: 'Topic', limit: 20, index_range: 'A'..'Z'
     config.add_facet_field 'author_facet', label: 'Author', limit: true
     config.add_facet_field 'link_facet', label: 'External Links'
+    config.add_facet_field 'status_facet', label: 'Pub Status'
 
 
     # Have BL send all facet field names to Solr, which has been the default
@@ -105,6 +107,7 @@ class CatalogController < ApplicationController
     config.add_index_field 'diamond_links_count_i', label: 'Diamond Permalinks'
     config.add_index_field 'diamond_other_links_count_i', label: 'Other Diamond Links'
     config.add_index_field 'journal_finder_links_count_i', label: 'Journal Finder Links'
+    config.add_index_field 'status_t', label: 'Pub Status'
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
@@ -120,6 +123,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'language_facet', label: 'Language'
     config.add_show_field 'published_display', label: 'Published'
     config.add_show_field 'published_vern_display', label: 'Published'
+    config.add_show_field 'status_t', label: 'Pub Status'
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
