@@ -12,6 +12,7 @@ GuidingLight::Harvest.module_eval do
 
   def self.external_link_patterns
     [
+      ["Primo", 'primo', /temple-primo.hosted.exlibrisgroup.com\/primo-explore\/fulldisplay/],
       ["Summon", 'summon', /temple.summon.serialssolutions.com/],
       ["Diamond Permanent", 'diamond', /diamond.temple.edu\/record=/],
       ["Diamond Non-Permanent", 'diamond_other', /diamond.temple.edu\/(?!record=)/],
